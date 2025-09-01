@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Next Level Gym</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: #fff;
+      border-bottom: 2px solid #e53935;
+    }
+    .logo img {
+  max-width: 130px;
+  height: auto;
+  display: block;
+}
+    nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.1rem;   /* increased font size */
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #e53935;
+}
+
+nav a.btn {
+  background: #e53935;
+  color: #fff !important;
+  padding: 8px 22px;   /* slightly smaller button */
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 24px;
+  transition: background 0.2s;
+  border: none;
+}
+
+nav a.btn:hover {
+  background: #fff;
+  color: #e53935 !important;
+  border: 2px solid #e53935;
+}
+
+    .hero {
+      background: url('images/gymbg.png') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 20px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      color: #e53935;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: #fff;
+      border: 1.5px solid #e53935;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(229,57,53,0.08);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(229,57,53,0.15);
+    }
+    .card img {
+      width: 100%;
+      max-width: 140px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      color: #e53935;
+      margin-bottom: 10px;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      text-align: center;
+    }
+    .value-box {
+      background: #fff8f8;
+      border: 1.5px solid #e53935;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .value-box h3 {
+      color: #e53935;
+      margin-bottom: 12px;
+    }
+    footer {
+      background: #e53935;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="Titan Fitness"></div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="login.html" class="btn">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>About Next Level Gym</h1>
+    <p>Your journey to strength, wellness, and confidence starts here.</p>
+  </div>
+
+  <section>
+    <h2>Who We Are</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto; font-size:1.1rem; color:#444;">
+      At <strong>Next Level Gym</strong>, we believe fitness is more than lifting weights – 
+      it’s about building a lifestyle that inspires confidence, health, and balance. 
+      With expert trainers, cutting-edge equipment, and a supportive community, 
+      we help every member achieve their personal best.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Core Values</h2>
+    <div class="values">
+      <div class="value-box">
+        <h3>🏋️ Strength</h3>
+        <p>Empowering members with physical and mental strength to push limits.</p>
+      </div>
+      <div class="value-box">
+        <h3>💡 Innovation</h3>
+        <p>Bringing modern workouts and fitness technology to your journey.</p>
+      </div>
+      <div class="value-box">
+        <h3>🤝 Community</h3>
+        <p>Fostering a culture where everyone feels motivated and supported.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Meet Our Trainers</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/strength.png" alt="Trainer John">
+        <h3>John Carter</h3>
+        <p>Strength & Conditioning Coach</p>
+      </div>
+      <div class="card">
+        <img src="images/yogat.png" alt="Trainer Lisa">
+        <h3>Lisa Smith</h3>
+        <p>Yoga & Wellness Expert</p>
+      </div>
+      <div class="card">
+        <img src="images/cardio.png" alt="Trainer Raj">
+        <h3>Raj Patel</h3>
+        <p>Cardio & Weight Loss Specialist</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Titan Fitness. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

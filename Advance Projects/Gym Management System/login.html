@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Next Level Gym</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('images/gymbg.png') no-repeat center center/cover;
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Blackish overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5); /* dark tone */
+      z-index: 0;
+      pointer-events: none;
+    }
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #e53935;
+    }
+    input{
+      width: 320px;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff8e1;
+    }
+    select {
+      width: 345px;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #fff8e1;
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #e53935;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #c62828;
+    }
+    p {
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+    p a {
+      color: #e53935;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <!-- Role Selector -->
+    <select id="role">
+      <option value="member">Member</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <input type="email" placeholder="Email" id="email" required>
+    <input type="password" placeholder="Password" id="password" required>
+
+    <button type="submit" id="loginBtn">Sign In</button> <!-- fixed ID -->
+
+    <p>Don’t have an account? <a href="register.html">Sign Up</a></p>
+  </div>
+
+  <!-- Make sure to use type="module" since you are importing in JS -->
+  <script type="module" src="login.js"></script>
+</body>
+</html>

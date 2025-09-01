@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Management - Home</title>
+  <style>
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;   /* reduced padding */
+  background: #fff;
+  border-bottom: 2px solid #e53935;
+}
+
+header .logo {
+  font-size: 1.8rem;   /* logo text size (if text logo) */
+  font-weight: bold;
+  color: #e53935;
+}
+.logo img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+}
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.1rem;   /* increased font size */
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #e53935;
+}
+
+nav a.btn {
+  background: #e53935;
+  color: #fff !important;
+  padding: 8px 22px;   /* slightly smaller button */
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 24px;
+  transition: background 0.2s;
+  border: none;
+}
+
+nav a.btn:hover {
+  background: #fff;
+  color: #e53935 !important;
+  border: 2px solid #e53935;
+}
+
+
+.hero {
+  position: relative;
+  height: 50vh; /* Full-height hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: url('images/gymbg.png') no-repeat center center/cover;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2; /* Keep text above overlay */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.hero .btn {
+  background: #e53935;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #fff;
+  color: #e53935;
+  border: 2px solid #e53935;
+}
+
+#classes {
+    padding: 20px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #classes h2 {
+    color: #e53935;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .card {
+    position: relative;
+    height: 320px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    text-align: left;
+  }
+
+  .overlay h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .overlay p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+  }
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 18px 10px 10px 10px;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  nav a {
+    margin-left: 18px;
+    margin-top: 10px;
+    padding: 9px 15px;
+  }
+  .logo img {
+    max-width: 90px;
+  }
+  .hero {
+    padding: 28px 10px 20px 10px;
+    font-size: 1.15rem;
+  }
+  section {
+    padding: 28px 8px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <a href="#classes">Classes</a>
+      <a href="login.html" class="btn">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>"Your Fitness, Our Commitment"</h1>
+    <p>Join Next Level Gym and achieve your health goals with world-class trainers, modern equipment, and personalized programs.</p>
+    <a href="login.html" class="btn">Get Started</a>
+  </div>
+
+<section id="classes">
+  <h2>Our Classes</h2>
+  <div class="grid">
+
+    <div class="card" style="background-image:url('images/yoga.png');">
+      <div class="overlay">
+        <h3>Yoga</h3>
+        <p>Balance your mind and body with guided yoga sessions.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('images/str.png');">
+      <div class="overlay">
+        <h3>Strength Training</h3>
+        <p>Build muscle and strength with our modern equipment.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('images/tm.png');">
+      <div class="overlay">
+        <h3>Cardio</h3>
+        <p>Burn calories and improve stamina with high-energy cardio.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+</body>
+</html>
