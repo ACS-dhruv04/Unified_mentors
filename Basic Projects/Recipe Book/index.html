@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-book-open"></i> My Recipe Book</h1>
+            <p>Store, search, and share your favorite recipes</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="add-recipe">
+                <i class="fas fa-plus"></i> Add Recipe
+            </button>
+            <button class="tab-btn" data-tab="view-recipes">
+                <i class="fas fa-list"></i> View Recipes
+            </button>
+            <button class="tab-btn" data-tab="search-recipes">
+                <i class="fas fa-search"></i> Search Recipes
+            </button>
+        </nav>
+
+        <!-- Add Recipe Section -->
+        <section id="add-recipe" class="tab-content active">
+            <div class="form-container">
+                <h2>Add New Recipe</h2>
+                <form id="recipe-form">
+                    <div class="form-group">
+                        <label for="recipe-name">Recipe Name *</label>
+                        <input type="text" id="recipe-name" placeholder="Enter recipe name">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-image">Recipe Image</label>
+                        <input type="file" id="recipe-image" accept="image/*">
+                        <div class="image-preview" id="image-preview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-ingredients">Ingredients *</label>
+                        <textarea id="recipe-ingredients" placeholder="List ingredients (one per line)"></textarea>
+                        <span class="error-message" id="ingredients-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-steps">Preparation Steps *</label>
+                        <textarea id="recipe-steps" placeholder="Enter preparation steps"></textarea>
+                        <span class="error-message" id="steps-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recipe-category">Category</label>
+                        <select id="recipe-category">
+                            <option value="">Select Category</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="main-course">Main Course</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="beverage">Beverage</option>
+                            <option value="snack">Snack</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prep-time">Preparation Time (minutes)</label>
+                        <input type="number" id="prep-time" min="1" placeholder="e.g., 30">
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Save Recipe
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- View Recipes Section -->
+        <section id="view-recipes" class="tab-content">
+            <div class="recipes-header">
+                <h2>All Recipes</h2>
+                <div class="filter-controls">
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="appetizer">Appetizer</option>
+                        <option value="main-course">Main Course</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="beverage">Beverage</option>
+                        <option value="snack">Snack</option>
+                    </select>
+                    <select id="sort-recipes">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name">Name A-Z</option>
+                        <option value="prep-time">Prep Time</option>
+                    </select>
+                </div>
+            </div>
+            <div id="recipes-container" class="recipes-grid">
+                <div class="no-recipes">
+                    <i class="fas fa-utensils"></i>
+                    <p>No recipes found. Start by adding your first recipe!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Recipes Section -->
+        <section id="search-recipes" class="tab-content">
+            <div class="search-container">
+                <h2>Search Recipes</h2>
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" id="search-input" placeholder="Search by name, ingredients, or category...">
+                        <button id="search-btn" class="btn-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="search-category">
+                            <option value="">All Categories</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="main-course">Main Course</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="beverage">Beverage</option>
+                            <option value="snack">Snack</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="search-results" class="recipes-grid">
+                    <div class="search-placeholder">
+                        <i class="fas fa-search"></i>
+                        <p>Enter keywords to search for recipes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Modal -->
+        <div id="recipe-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-recipe-content">
+                    <!-- Recipe details will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Success/Error Messages -->
+        <div id="message-container" class="message-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
