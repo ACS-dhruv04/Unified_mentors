@@ -1,0 +1,16 @@
+{
+  "name": "realtime-chat-rooms",
+  "version": "1.0.0",
+  "description": "WebSocket chat app with rooms, username auth, timestamps, basic formatting",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "sanitize-html": "^2.13.0"
+  }
+}
