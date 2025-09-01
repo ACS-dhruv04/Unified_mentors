@@ -20,3 +20,6 @@ A web app for managing shops, products, and offers in a shopping mall.
 ## Usage
 - Users can browse shops, products, and offers.
 - Admin can manage shops and products from the dashboard.
+
+## Important Note
+- I sincerely apologize for the inconvenience. The JavaScript code was not working on my laptop due to some technical issues, and despite my efforts, I was unable to resolve the problem. As a result, I was unable to run or test the program as expected. I regret the difficulty this may have caused and appreciate your understanding.
