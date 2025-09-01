@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Quiz Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <section id="welcome" class="welcome">
+    <h1>🚀 Ultimate Quiz Challenge</h1>
+    <p>20 questions • 15s each • Navigate with Previous/Next</p>
+    <button id="start-btn">Start Quiz</button>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz" class="quiz hidden">
+    <header class="quiz-header">
+      <h2 id="q-number">Question 1 of 20</h2>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <div class="timer">⏳ <span id="time">15</span>s</div>
+    </header>
+
+    <div class="card">
+      <h3 id="q-text"></h3>
+      <div id="options" class="options"></div>
+    </div>
+
+    <footer class="quiz-footer">
+      <button id="prev-btn" disabled>← Previous</button>
+      <button id="next-btn">Next →</button>
+    </footer>
+
+    <div id="result" class="result hidden">
+      <h2>Your Score</h2>
+      <p id="score"></p>
+      <button id="restart-btn">Restart</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
