@@ -23,4 +23,5 @@ A simple web-based system to manage gym members, login, registration, and workou
 
 
 ## Important Note
--I sincerely apologize for the inconvenience. The JavaScript code was not working on my laptop due to some technical issues, and despite my efforts, I was unable to resolve the problem. As a result, I was unable to run or test the program as expected. I regret the difficulty this may have caused and appreciate your understanding.
+- I sincerely apologize for the inconvenience. The JavaScript code was not working on my laptop due to some technical issues, and despite my efforts, I was unable to resolve the problem. As a result, I was unable to run or test the program as expected. I regret the difficulty this may have caused and appreciate your understanding.
+
