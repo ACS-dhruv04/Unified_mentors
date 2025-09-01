@@ -1,0 +1,108 @@
+/* Reset for consistency */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f0e6, #d7ccc8);
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #4e342e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #fff8f0;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(78, 52, 46, 0.3);
+  max-width: 700px;
+  width: 100%;
+  padding: 36px 48px;
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 20px 40px rgba(78, 52, 46, 0.5);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 1.2px;
+  color: #6d4c41;
+  text-shadow: 1px 1px 3px #e0cbc1;
+}
+
+#story-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  padding: 0 12px;
+  border-left: 6px solid #a1887f;
+  background: #f9f3ed;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px #ecd9cb;
+  transition: background 0.4s ease;
+}
+
+#story-text:hover {
+  background: #f4e8dd;
+}
+
+#choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.choice-btn {
+  background: #8d6e63;
+  border: none;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(141, 110, 99, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  flex: 1 1 180px;
+  max-width: 220px;
+}
+
+.choice-btn:hover {
+  background: #6d4c41;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(109, 76, 65, 0.7);
+}
+
+#restart {
+  margin-top: 36px;
+  display: block;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #bcaaa4;
+  border: none;
+  color: #4e342e;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(188, 170, 164, 0.6);
+  transition: background 0.3s ease;
+}
+
+#restart:hover {
+  background: #8d6e63;
+  color: #fff;
+}
