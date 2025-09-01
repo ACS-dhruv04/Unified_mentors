@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoWave Playlist Player</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  </head>
+<body>
+  <div class="player-container">
+    <h1>My Music Player</h1>
+
+    <div class="song-info">
+      <h2 id="song-title">Title</h2>
+      <p id="artist">Artist</p>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()"><i class="fas fa-step-backward"></i></button>
+      <button onclick="playPause()" id="play-btn"><i class="fas fa-play"></i></button>
+      <button onclick="nextSong()"><i class="fas fa-step-forward"></i></button>
+    </div>
+
+    <input type="range" id="progress-bar" value="0" onchange="seekSong()">
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" onchange="setVolume()" value="0.5">
+
+    <div class="playlist">
+      <h3>Playlist</h3>
+      <ul id="song-list"></ul>
+    </div>
+
+    <div class="upload-section">
+      <label for="upload">+ Add Your Music</label>
+      <button onclick="shufflePlaylist()" title="Shuffle Playlist"><i class="fas fa-random"></i></button>
+      <input type="file" id="upload" accept="audio/*" onchange="handleUpload(event)">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body></html>
